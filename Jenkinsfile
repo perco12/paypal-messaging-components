@@ -1,3 +1,4 @@
+// okeith
 pipeline {
     agent {
         label 'mesos'
@@ -93,7 +94,7 @@ pipeline {
             emailext(
                 mimeType: 'text/html',
                 // Single quotes on this so the variable makes it to the email plugin instead of Jenkins trying to replace
-                to: '$DEFAULT_RECIPIENTS',
+                to: 'opercy@paypal.com',
                 subject: "paypal-messaging-components - ${BRANCH_NAME} - Build #${env.BUILD_NUMBER} - SUCCESS!",
                 body: """
                     Build Succeeded!<br />
