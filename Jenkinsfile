@@ -1,4 +1,3 @@
-//okeit
 pipeline {
     agent {
         label 'mesos'
