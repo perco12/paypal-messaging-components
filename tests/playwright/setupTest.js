@@ -1,8 +1,8 @@
 import { test as base, expect } from '@playwright/test';
 
 const test = base.extend({
-    message: async ({ page }, use) => {
-        const webpageMessage = async (options = {}) => {
+    sdkMessage: async ({ page }, use) => {
+        const message = async (options = {}) => {
             // Default options
             const { amount = 100, account = 'DEV_US_MULTI', offer = 'PAY_LATER_SHORT_TERM' } = options;
 
@@ -11,7 +11,7 @@ const test = base.extend({
             page.waitForLoadState('domcontentloaded');
             return page;
         };
-        await use(webpageMessage);
+        await use(message);
     }
     // modal: // TODO
 });
