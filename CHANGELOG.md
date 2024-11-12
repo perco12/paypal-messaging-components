@@ -1,5 +1,18 @@
 # Changelog
 
+### [1.65.2](https://github.com/paypal/paypal-messaging-components/compare/v1.65.1...v1.65.2) (2024-11-12)
+
+
+### Bug Fixes
+
+* relax PPC inline replace ([#1155](https://github.com/paypal/paypal-messaging-components/issues/1155)) ([f2d4c7d](https://github.com/paypal/paypal-messaging-components/commit/f2d4c7d2a3821729ef9db0d4075d34f7799cb86a))
+
+
+### Code Refactoring
+
+* update au disclosure ([#1154](https://github.com/paypal/paypal-messaging-components/issues/1154)) ([8b49734](https://github.com/paypal/paypal-messaging-components/commit/8b497340006684be5b6e635bdc53252f7d27026b))
+* update us pm modal disclosure ([#1152](https://github.com/paypal/paypal-messaging-components/issues/1152)) ([00671d8](https://github.com/paypal/paypal-messaging-components/commit/00671d8f2c389a0827e7d53d0b7226b73b8559c2))
+
 ### [1.65.1](https://github.com/paypal/paypal-messaging-components/compare/v1.65.0...v1.65.1) (2024-10-21)
 
 
