@@ -187,7 +187,9 @@ const Message = function ({ markup, meta, parentStyles, warnings }) {
                 request('GET', `${window.location.origin}/credit-presentment/smart/message?${query}`).then(
                     ({ data: resData }) => {
                         const encodedData = resData.slice(resData.indexOf('<!--') + 4, resData.indexOf('-->'));
-                        const data = parseObjFromEncoding(encodedData);
+                        const data = encodedData.startsWith('{')
+                            ? JSON.parse(encodedData)
+                            : parseObjFromEncoding(encodedData);
                         button.innerHTML = data.markup ?? markup ?? '';
                         const buttonWidth = button.offsetWidth;
                         const buttonHeight = button.offsetHeight;
