@@ -1,7 +1,7 @@
 import { getByText, fireEvent, queryByText } from '@testing-library/dom';
 
 import Message from 'src/components/message/Message';
-import { request, createState } from 'src/utils';
+import { request, createState, parseObjFromEncoding } from 'src/utils';
 import xPropsMock from 'utils/xPropsMock';
 
 const ts = {
@@ -63,6 +63,7 @@ describe('Message', () => {
         createState.mockClear();
         request.mockClear();
         xPropsMock.clear();
+        parseObjFromEncoding.mockClear();
     });
 
     test('Renders the button with styles', () => {
@@ -178,5 +179,15 @@ describe('Message', () => {
             requestDuration: 123,
             ts
         });
+    });
+
+    test('raw json data from request', async () => {
+        request.mockReturnValue(
+            Promise.resolve({
+                data: '<!--{"markup":"<div>json response</div>","meta":{"messageRequestId":"34567"}}-->'
+            })
+        );
+        Message(serverData);
+        expect(parseObjFromEncoding).not.toHaveBeenCalled();
     });
 });
