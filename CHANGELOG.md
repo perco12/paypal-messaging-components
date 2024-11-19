@@ -1,5 +1,12 @@
 # Changelog
 
+### [1.65.3](https://github.com/paypal/paypal-messaging-components/compare/v1.65.2...v1.65.3) (2024-11-19)
+
+
+### Code Refactoring
+
+* update request to accept raw JSON or encoded  ([#1157](https://github.com/paypal/paypal-messaging-components/issues/1157)) ([a2e49c1](https://github.com/paypal/paypal-messaging-components/commit/a2e49c1286ec1653a06bac695e3e1f01ecf48fde))
+
 ### [1.65.2](https://github.com/paypal/paypal-messaging-components/compare/v1.65.1...v1.65.2) (2024-11-12)
 
 
