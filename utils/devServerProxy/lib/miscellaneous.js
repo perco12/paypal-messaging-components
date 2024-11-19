@@ -61,19 +61,6 @@ export const localizeCurrency =
 
 export const waitForTimeout = timeout => new Promise(resolve => setTimeout(resolve, timeout));
 
-export function btoa(str) {
-    const buffer = Buffer.from(str.toString(), 'binary');
-    return buffer.toString('base64');
-}
-
-export function toBinary(string) {
-    const codeUnits = new Uint16Array(string.length);
-    for (let i = 0; i < codeUnits.length; i++) {
-        codeUnits[i] = string.charCodeAt(i);
-    }
-    return String.fromCharCode(...new Uint8Array(codeUnits.buffer));
-}
-
 export const createMockZoidMarkup = ({ component, scriptUID, port, jsonData }) => {
     const setupFunctionName = component === 'message' ? 'crc.setupMessage' : 'crc.setupModal';
 

@@ -187,6 +187,7 @@ const Message = function ({ markup, meta, parentStyles, warnings }) {
                 request('GET', `${window.location.origin}/credit-presentment/smart/message?${query}`).then(
                     ({ data: resData }) => {
                         const jsonData = resData.slice(resData.indexOf('<!--') + 4, resData.indexOf('-->'));
+                        // TODO: Cleanup ternary as 'parseObjFromEncoding' will no longer be used; only JSON.parse will be required.
                         const data = jsonData.startsWith('{') ? JSON.parse(jsonData) : parseObjFromEncoding(jsonData);
                         button.innerHTML = data.markup ?? markup ?? '';
                         const buttonWidth = button.offsetWidth;
