@@ -77,16 +77,16 @@
         .open & {
             height: 172px;
             transition: height 0.2s linear;
+
+            @include smallMobile {
+                height: 190px;
+            }
         }
 
         .accordion__row {
             display: flex;
             justify-content: space-between;
             padding: 25px 18px 0px 13px;
-
-            @include smallMobile {
-                padding-top: 22px;
-            }
 
             &:first-child {
                 padding-top: 0px;
