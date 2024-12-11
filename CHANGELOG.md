@@ -1,5 +1,17 @@
 # Changelog
 
+### [1.65.4](https://github.com/paypal/paypal-messaging-components/compare/v1.65.3...v1.65.4) (2024-12-11)
+
+
+### Bug Fixes
+
+* DE GPL LT Calculator properly display APRs ([#1163](https://github.com/paypal/paypal-messaging-components/issues/1163)) ([5cc9bcc](https://github.com/paypal/paypal-messaging-components/commit/5cc9bcce1df1cf20d978118baec6e055ee997ed9))
+
+
+### Continuous Integration
+
+* update playwright automated tests to run on all PRs ([#1158](https://github.com/paypal/paypal-messaging-components/issues/1158)) ([ef9f9d8](https://github.com/paypal/paypal-messaging-components/commit/ef9f9d88600fe0d82f77e1e354e0a483aee54b20))
+
 ### [1.65.3](https://github.com/paypal/paypal-messaging-components/compare/v1.65.2...v1.65.3) (2024-11-19)
 
 
